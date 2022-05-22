@@ -1,0 +1,36 @@
+$light: white;
+$dark: black;
+$default: rgb(47, 92, 158);
+$danger: rgb(158, 47, 65);
+$warning: rgb(158, 110, 47);
+$success: rgb(18, 105, 7);
+
+.button {
+    width: 100px;
+    height: 30px;
+    margin: 5px 2px;
+    background: $light;
+    color: $dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: solid $light 1px;
+
+    &.small {
+        width: 70px;
+        height: 25px;
+    }
+
+    &:hover {
+        background: transparent;
+        color: $light;
+    }
+
+    &.black {
+        color: $light;
+        background: $dark;
+        border: solid 1px $dark;
+        margin: 2px;
+    }
+}

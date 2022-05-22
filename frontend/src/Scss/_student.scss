@@ -1,0 +1,130 @@
+.student {
+    .my-school {
+        color: $light;
+        margin: 10px;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+
+    .my-candidates {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 50px 0;
+
+        .s-candidate {
+            position: relative;
+            background: $light;
+            margin: 20px;
+            padding: 5px;
+            max-width: 150px;
+            max-height: 150px;
+            min-width: 150px;
+            min-height: 150px;
+            border-radius: 5px;
+            box-shadow: inset 0 0 20px transparentize($dark, .5), 0 0 20px $dark;
+            cursor: pointer;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                position: absolute;
+                // top: 10px;
+                // left: 10px;
+            }
+
+            .c-check {
+                display: none;
+            }
+
+            &.csel {
+                transform: scale(1.2);
+
+                &:hover {
+                    transform: scale(1.25);
+                }
+
+                .c-check {
+                    display: flex;
+                }
+
+
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .c-options {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin: 30px;
+
+        .cast {
+            svg {
+                margin-right: 5px;
+            }
+
+            font-size: large;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: $dark 0 0 20px;
+            border: none;
+            transition: .3s ease-in-out;
+
+            &:hover:enabled {
+                background: $dark;
+                color: $light;
+                box-shadow: $light 0 0 20px;
+                border: none;
+            }
+        }
+    }
+
+    .s-winner {
+        font-size: 50px;
+        color: $light;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 50px;
+        animation: winner 2s infinite linear;
+    }
+}
+
+@keyframes winner {
+    0% {
+        text-shadow: red 0 0 30px;
+        color: green;
+        letter-spacing: 2px;
+    }
+
+    25% {
+        text-shadow: green 0 0 30px;
+        color: yellow;
+    }
+
+    50% {
+        text-shadow: blue 0 0 30px;
+        color: red;
+        letter-spacing: 0px;
+    }
+
+    75% {
+        text-shadow: yellow 0 0 30px;
+        color: blue;
+    }
+
+    100% {
+        text-shadow: red 0 0 20px;
+        color: green;
+        letter-spacing: 2px;
+    }
+}

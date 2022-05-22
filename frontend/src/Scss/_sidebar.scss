@@ -1,0 +1,40 @@
+nav {
+    display: flex;
+    align-items: center;
+    background: white;
+    max-width: fit-content;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 0 5px;
+    position: fixed;
+    opacity: .2;
+    transition: .3s ease-in-out;
+    box-shadow: black 0 0 10px;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    a {
+        color: black;
+        margin: 5px 2px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: .3s ease-in-out;
+    }
+
+    a:hover {
+        background: rgba(0, 0, 0, 0.105);
+        letter-spacing: 2px;
+    }
+
+    a.active {
+        background: black;
+        color: white;
+        letter-spacing: 2px;
+    }
+}

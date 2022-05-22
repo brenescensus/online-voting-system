@@ -1,0 +1,63 @@
+.admin {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: 30px;
+    color: $light;
+    margin: 20px;
+    text-shadow: $dark 0 0 20px;
+  }
+
+  .top-dash {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .dash-item {
+      position: relative;
+      flex: 1;
+      margin: 10px;
+      height: 80px;
+      max-width: 300px;
+      min-width: 200px;
+      border-radius: 5px;
+      background: $light;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      box-shadow: inset 0 0 50px $dark, 0 0 20px $dark;
+      font-size: 20px;
+      padding: 10px;
+
+      .count {
+        font-size: 52px;
+      }
+
+      .icon {
+        opacity: .2;
+        transition: .3s ease-in-out;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+      }
+
+      &:hover {
+        background: $dark;
+        color: $light;
+        box-shadow: 0 0 20px $light;
+      }
+    }
+  }
+
+  .prov-winners {
+    margin: 5px;
+    color: $light;
+
+    .winner {
+      text-transform: capitalize;
+    }
+  }
+
+
+}

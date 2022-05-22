@@ -1,0 +1,45 @@
+.can-school {
+    background: $light;
+    margin: 20px 0;
+    color: $dark;
+    padding: 5px;
+    border-radius: 5px;
+    width: calc(100% - 30px);
+    // box-shadow: inset transparentize($dark, .5) 0 0 20px, transparentize($dark, .2) 0 0 10px;
+
+    .school-name {
+        text-transform: uppercase;
+        font-weight: bolder;
+    }
+
+    .can-details {
+        display: flex;
+
+        .can-list {
+            margin: 5px;
+            text-transform: capitalize;
+
+            .candidate {
+                display: flex;
+                align-items: center;
+
+                .remove-candidate {
+                    cursor: pointer;
+                    margin: 5px;
+                    color: white;
+                    background-color: red;
+                    padding: 2px 5px;
+                    border-radius: 52px;
+                    font-size: x-small;
+                    transition: .5s ease-in-out;
+                    border: solid 1px red;
+
+                    &:hover {
+                        background: white;
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

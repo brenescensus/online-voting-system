@@ -1,0 +1,135 @@
+.login {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: inset transparentize($dark, 0.5) 0 0 50px,
+    transparentize($dark, 0.6) 0 0 50px;
+  padding: 20px;
+  background: transparentize(blue, 0.8);
+  border-radius: 10px;
+  min-width: 300px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .message {
+      color: transparentize($light, 0.4);
+      font-size: small;
+      background: transparentize($danger, 0.2);
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px 0;
+      box-shadow: inset transparentize($dark, 0.6) 0 0 20px,
+        transparentize($dark, 0.5) 0 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        flex: 1;
+        margin-left: 5px;
+        transform: translateY(1px);
+      }
+    }
+
+    .title {
+      margin-bottom: 10px;
+      font-size: x-large;
+    }
+
+    .linput {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // flex-direction: column;
+      background: transparentize($light, 0.5);
+      margin: 5px 0;
+      padding: 5px;
+      border-radius: 5px;
+
+      &:focus-within {
+        background: transparentize($light, 0.2);
+      }
+
+      label {
+        font-size: small;
+        margin: 2px;
+      }
+
+      input {
+        background: none;
+        //   width: 200px;
+        font-size: medium;
+        flex: 1;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+          font-size: small;
+        }
+      }
+    }
+
+    .def-btn {
+      background: $default;
+      border: none;
+      color: $light;
+      padding: 10px 14px;
+      align-self: flex-end;
+      width: fit-content;
+      margin: 10px 2px;
+      border-radius: 5px;
+      box-shadow: transparentize($dark, 0.6) 0 0 10px,
+        inset transparentize($dark, 0.6) 0 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        letter-spacing: 2px;
+      }
+
+      span {
+        margin-right: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .toggle-login-as {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: small;
+    }
+
+    .option {
+      border: solid transparent 1.4px;
+      margin: 5px 5px 0 5px;
+      padding: 5px 10px;
+      border-radius: 5px;
+
+      &.sel {
+        background: $dark;
+        color: transparentize($light, 0.2);
+        box-shadow: transparentize($dark, 0.6) 0 0 20px;
+        pointer-events: none;
+      }
+
+      &:hover {
+        border: solid transparentize($dark, 0) 1.6px;
+      }
+
+      cursor: pointer;
+
+      span {
+        margin-left: 5px;
+        font-size: small;
+      }
+    }
+  }
+}

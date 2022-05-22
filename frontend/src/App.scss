@@ -1,0 +1,93 @@
+@import "./Scss/colors";
+@import "./Scss/login";
+@import "./Scss/admin";
+@import "./Scss/students";
+@import "./Scss/student";
+@import "./Scss/candidate";
+@import './Scss/sidebar';
+
+.title {
+    font-size: 30px;
+    font-weight: bolder;
+    color: $light // margin: 10px;
+}
+
+.auth_user {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background: $light;
+    color: $dark;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: black 0 0 10px;
+
+    .name {
+        margin: 0 5px;
+        text-transform: capitalize;
+    }
+
+    .logout {
+        &:hover {
+            cursor: pointer;
+            color: $danger;
+        }
+    }
+}
+
+.modal {
+
+    .title {
+        font-size: 25px;
+        color: $dark;
+    }
+
+    .close {
+        color: $danger;
+        position: absolute;
+        cursor: pointer;
+        right: 15px;
+        top: 15px;
+
+        &:hover {
+            transform: scale(1.2) rotate(90deg);
+        }
+    }
+
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background: $light;
+    color: $dark;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: $dark 0 0 100px;
+}
+
+.input {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px $dark;
+    padding: 2px;
+    border-radius: 2px;
+
+    label {
+        font-size: small;
+        font-weight: bolder;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    select {
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+}

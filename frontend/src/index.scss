@@ -1,0 +1,52 @@
+@import "./Scss/colors";
+
+@font-face {
+  font-family: l;
+  src: url("./Fonts/EuclidSquare-Light.woff");
+}
+
+@font-face {
+  font-family: r;
+  src: url("./Fonts/EuclidSquare-Regular.woff");
+}
+
+@font-face {
+  font-family: m;
+  src: url("./Fonts/EuclidSquare-Medium.woff");
+}
+
+@font-face {
+  font-family: s;
+  src: url("./Fonts/EuclidSquare-Semibold.woff");
+}
+
+* {
+  font-family: l;
+  transition: 0.3s ease-in-out;
+  a{
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: inset black 0 0 500px;
+  background: linear-gradient(45deg, $danger, blue);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.rotating {
+  animation: rota 1s infinite linear;
+}
+
+@keyframes rota {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

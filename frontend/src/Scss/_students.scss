@@ -1,0 +1,63 @@
+.students {
+    padding: 10px;
+    color: $light;
+
+    .list {
+        // background: green;
+
+        .options {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px 0;
+
+            .search {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: white;
+                padding: 5px 10px;
+                // border-radius: 5px;
+                margin-right: 5px;
+                color: black;
+                border: solid 1.5px white;
+
+                input {
+                    margin-left: 5px;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+
+        table {
+            width: 100%;
+
+            tr {
+                &:not(:nth-child(1)) {
+                    cursor: pointer;
+
+                    td {
+                        padding: 5px 10px;
+                        text-transform: capitalize;
+                    }
+
+                    &:hover {
+                        background: transparentize($light, .9);
+                    }
+                }
+
+                &:nth-child(1) {
+                    background: $light;
+                    color: $dark;
+
+                    th {
+                        padding: 5px 10px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
